@@ -50,7 +50,7 @@ class NWPUDataset(torch.utils.data.Dataset):
 
 # Data
 print('==> Preparing data..')
-data_path ='/home/s571b087/lensless/project/rice_face/demosaiced_measurement'
+data_path ='../fc_captures/'
 
 im_size = 32
 train_split = 0.7
