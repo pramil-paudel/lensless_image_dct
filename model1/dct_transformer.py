@@ -62,7 +62,7 @@ def transfom_to_multiple_images(image_to_transform):
     DCT of 32 * 32 image 
     '''
     DCT_32 = DCT(rgb_image_32).astype(np.uint8)
-    return np.concatenate((x0, x1, x2, x3, DCT_32), axis=2).astype(np.uint8)
+    return np.concatenate((x0, x1, x2, x3, DCT_32), axis=1).astype(np.uint8)
 
 
 def dct2(pix):
