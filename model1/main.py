@@ -21,7 +21,7 @@ from torch.autograd import Variable
 from torch.optim.lr_scheduler import StepLR
 
 parser = argparse.ArgumentParser(description='PyTorch Training')
-parser.add_argument("--batch_size", type=int, default=10, help="batch size")
+parser.add_argument("--batch_size", type=int, default=30, help="batch size")
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
 parser.add_argument("--outf", type=str, default="logs", help='path of log files')
 parser.add_argument('--resume', '-r', action='store_true', help='resume from checkpoint')
