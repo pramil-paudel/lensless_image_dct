@@ -23,7 +23,7 @@ def transfom_to_multiple_images(image_to_transform):
     '''
 
     global calib
-    input_image = image_to_transform
+    input_image = np.asarray(image_to_transform)
     calib = loadmat('flatcam_calibdata.mat')
     '''
     Covert into Bayers Pattern 
@@ -108,5 +108,5 @@ def plot_an_image(images):
 
 if __name__ == '__main__':
     # preprocess_demosaic("", True)
-    image = mpimg.imread('../sample_images/01/01/001.png')
+    image = Image.open('../sample_images/01/01/001.png')
     transfom_to_multiple_images(image)
