@@ -43,8 +43,8 @@ def transfom_to_multiple_images(image_to_transform):
     #rgb_image_64 = resize(rgb_image_in_255, (64, 64)).astype(np.uint8)
     #rgb_image_32 = resize(rgb_image_in_255, (32, 32)).astype(np.uint8)
     # This resize has different output ???
-    rgb_image_64 = cv2.resize(rgb_image, (64, 64), interpolation=cv2.INTER_CUBIC)
-    rgb_image_32 = cv2.resize(rgb_image, (32, 32), interpolation=cv2.INTER_CUBIC)
+    rgb_image_64 = cv2.resize(rgb_image_in_255, (64, 64), interpolation=cv2.INTER_CUBIC)
+    rgb_image_32 = cv2.resize(rgb_image_in_255, (32, 32), interpolation=cv2.INTER_CUBIC)
     # print(rgb_image_64)
     '''
     Converting 64 * 64 image to DCT array 
@@ -62,7 +62,7 @@ def transfom_to_multiple_images(image_to_transform):
     DCT of 32 * 32 image 
     '''
     DCT_32 = DCT(rgb_image_32).astype(np.uint8)
-    return np.concatenate((x0, x1, x2, x3, DCT_32), axis=1).astype(np.uint8)
+    return np.concatenate((x0, x1, x2, x3, DCT_32), axis=2).astype(np.uint8)
 
 
 def dct2(pix):
