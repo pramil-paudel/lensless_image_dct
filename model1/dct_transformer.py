@@ -5,6 +5,8 @@ from matplotlib import pyplot as plt
 from scipy.fftpack import dct, idct
 from scipy.io import loadmat
 from skimage.transform import resize
+import cv2
+
 
 import flatcam
 
@@ -38,11 +40,11 @@ def transfom_to_multiple_images(image_to_transform):
     '''
     First resize into (64,64) and take DCT : it will convert into 
     '''
-    rgb_image_64 = resize(rgb_image_in_255, (64, 64)).astype(np.uint8)
-    rgb_image_32 = resize(rgb_image_in_255, (32, 32)).astype(np.uint8)
+    #rgb_image_64 = resize(rgb_image_in_255, (64, 64)).astype(np.uint8)
+    #rgb_image_32 = resize(rgb_image_in_255, (32, 32)).astype(np.uint8)
     # This resize has different output ???
-    # rgb_image_64 = cv2.resize(rgb_image, (64, 64), interpolation=cv2.INTER_CUBIC)
-    # rgb_image_32 = cv2.resize(rgb_image, (32, 32), interpolation=cv2.INTER_CUBIC)
+    rgb_image_64 = cv2.resize(rgb_image, (64, 64), interpolation=cv2.INTER_CUBIC)
+    rgb_image_32 = cv2.resize(rgb_image, (32, 32), interpolation=cv2.INTER_CUBIC)
     # print(rgb_image_64)
     '''
     Converting 64 * 64 image to DCT array 
