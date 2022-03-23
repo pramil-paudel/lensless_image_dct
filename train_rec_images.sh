@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH -p intel
+#SBATCH -p gpu
 #SBATCH -N 5
 #SBATCH -n 10
 #SBATCH -c 1
-#SBATCH --mem=1GB
+#SBATCH --mem=32GB
 #SBATCH -t 02:00:00 
 #SBATCH -J training_rec_images
 #SBATCH -o slurm-%j.out

@@ -1,3 +1,4 @@
+#!/bin/bash
 #SBATCH -p gpu
 #SBATCH --gres="gpu:titanxp:1"
 #SBATCH -c 4
