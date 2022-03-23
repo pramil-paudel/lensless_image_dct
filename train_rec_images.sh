@@ -8,5 +8,5 @@
 #SBATCH -J training_rec_images
 #SBATCH -o slurm-%j.out
  
-python model1/main.py
+python3 model1/main.py
 #python LearnToPayAttention_image_rec/train.py --attn_mode after --outf logs_after --normalize_attn --log_images

@@ -6,5 +6,5 @@
 #SBATCH -J DCT_test_with_VGG
 #SBATCH -o slurm-%j.out
 
-python model1/main.py
+python3 model1/main.py
 
