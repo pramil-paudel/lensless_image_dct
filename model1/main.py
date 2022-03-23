@@ -119,7 +119,7 @@ def train(epoch):
         optimizer.zero_grad()
         outputs = net(inputs)
         loss = criterion(outputs, targets)
-        #loss.backward()
+        loss.backward()
         optimizer.step()
 
         train_loss += loss.item()
